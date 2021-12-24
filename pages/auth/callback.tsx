@@ -90,6 +90,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   };
 };
 
-const Login: NextPage = () => null;
+const Callback: NextPage = () => null;
 
-export default Login;
+export default Callback;
