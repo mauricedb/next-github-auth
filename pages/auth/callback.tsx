@@ -1,5 +1,6 @@
 import { GetServerSideProps, NextPage } from 'next';
 import cookie from 'cookie';
+import { useEffect } from 'react';
 
 function validateState(state?: string | string[], cookies?: string): boolean {
   if (cookies) {
@@ -83,13 +84,15 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   }
 
   return {
-    redirect: {
-      destination: '/',
-      permanent: false,
-    },
+    props: {},
   };
 };
 
-const Callback: NextPage = () => null;
+const Callback: NextPage = () => {
+  useEffect(() => {
+    location.href = '/';
+  }, []);
+  return null;
+};
 
 export default Callback;

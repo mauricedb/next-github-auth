@@ -9,7 +9,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     maxAge: 60 * 15,
     httpOnly: true,
     path: '/auth/',
-    sameSite: 'strict',
     secure: process.env.NODE_ENV === 'production',
   });
 
